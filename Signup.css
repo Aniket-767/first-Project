@@ -1,0 +1,168 @@
+/* === Root Variables === */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --border-color: rgba(255, 255, 255, 0.4);
+  --input-bg: rgba(255, 255, 255, 0.2);
+  --text-color: #fff;
+  --accent: #00bfff;
+  --accent-hover: #009ad6;
+  --font: 'Poppins', sans-serif;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: url('Images/singup.avif')no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* === Signup Box === */
+.signup-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.signup-box {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px) brightness(1.1);
+  padding: 3rem 2rem;
+  width: 90%;
+  max-width: 28rem;
+  box-shadow: var(--shadow);
+  color: var(--text-color);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
+}
+
+/* === Input Fields === */
+.input-group {
+  text-align: left;
+  margin-bottom: 1.3rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background: var(--input-bg);
+  color: var(--text-color);
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid var(--accent);
+}
+.input-group input:hover{
+  transform: translateY(-2px);
+}
+
+/* === Button === */
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* === Login Text === */
+.login-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-text a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .signup-box {
+    width: 95%;
+    padding: 2rem 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+  }
+}
